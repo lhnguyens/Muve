@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
         setupViews()
         setupConstraints()
@@ -91,9 +91,6 @@ class ViewController: UIViewController {
             
             ])
     }
-    
-    
-
 
 }
 
