@@ -19,7 +19,7 @@ class CustomiseChallengeViewController: UIViewController, VerticalCardSwiperData
     
     var questionLabel: UILabel!
     
-    var arrayOfButtons: [UILabel]!
+   // var arrayOfButtons: [UILabel]!
     
     
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class CustomiseChallengeViewController: UIViewController, VerticalCardSwiperData
         setupQuestionLabel()
         setupConstraints()
         cardSwiper.datasource = self
+        cardSwiper.delegate = self
      
     }
     
@@ -75,26 +76,7 @@ class CustomiseChallengeViewController: UIViewController, VerticalCardSwiperData
     }
     
     
-    func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
-        return excersiseList.count
-        }
     
-    func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
-       
-        
-        if let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "cellCard", for: index) as? ExampleCardCell {
-            let item = excersiseList[index]
-            cardCell.backgroundColor = .blue
-            cardCell.getCardInfo(exC: item)
-            cardCell.layer.cornerRadius = 10
-            cardCell.layer.masksToBounds = true
-
-            return cardCell
-            
-        }
-        return CardCell()
-        
-    }
     
     func createData () -> [Excersises] {
         let pushUp = Excersises(name: "Push Ups", backgroundColor: .blue)
@@ -109,5 +91,46 @@ class CustomiseChallengeViewController: UIViewController, VerticalCardSwiperData
         
         return excersiseList
     }
+    
+}
+
+
+// CARD ACTIONS
+extension CustomiseChallengeViewController {
+    
+    func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
+        return excersiseList.count
+    }
+    
+    func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
+        
+        
+        if let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "cellCard", for: index) as? ExampleCardCell {
+            let item = excersiseList[index]
+            
+            cardCell.getCardInfo(exC: item)
+            cardCell.layer.cornerRadius = 10
+            cardCell.layer.masksToBounds = true
+            
+            
+            return cardCell
+            
+        }
+        return CardCell()
+        
+    }
+    func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
+        excersiseList.remove(at: index)
+
+        
+    }
+    
+    func didSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
+        
+        let nextController = SecondQuestionViewController()
+        self.navigationController?.pushViewController(nextController, animated: true)
+        print("Screens Pushed")
+    }
+    
 }
 

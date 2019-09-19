@@ -1,16 +1,15 @@
 //
-//  ExampleCardCell.swift
+//  DaysCell.swift
 //  Muve
 //
-//  Created by Luan Nguyen on 2019-09-18.
+//  Created by Luan Nguyen on 2019-09-19.
 //  Copyright © 2019 Luan Nguyen. All rights reserved.
 //
 
 import Foundation
-import UIKit
 import VerticalCardSwiper
 
-class ExampleCardCell: CardCell {
+class DaysCell: CardCell {
     
     let textLabel: UILabel = {
         let label = UILabel()
@@ -21,14 +20,21 @@ class ExampleCardCell: CardCell {
     }()
     
     private func addLabel() {
-        addSubview(textLabel)
+        contentView.addSubview(textLabel)
         NSLayoutConstraint.activate([
             
             textLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-           
+            
             textLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
             ])
     }
+    
+    func getDays (days: Days) {
+        textLabel.text = days.days
+        contentView.backgroundColor = days.backgroundColor
+        contentView.layer.opacity = 0.85
+    }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,9 +45,5 @@ class ExampleCardCell: CardCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func getCardInfo (exC: Excersises) {
-        textLabel.text = exC.name
-        contentView.backgroundColor = exC.backgroundColor
-    }
     
 }

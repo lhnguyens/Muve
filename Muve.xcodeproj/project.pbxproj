@@ -12,6 +12,10 @@
 		0F086E87233186EE00E225B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F086E86233186EE00E225B1 /* Assets.xcassets */; };
 		0F086E8A233186EE00E225B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F086E88233186EE00E225B1 /* LaunchScreen.storyboard */; };
 		0F191C86233375C5000FAA42 /* Excersises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C85233375C5000FAA42 /* Excersises.swift */; };
+		0F191C8A23338CCC000FAA42 /* SecondQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C8923338CCC000FAA42 /* SecondQuestionViewController.swift */; };
+		0F191C8C233394A9000FAA42 /* DaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C8B233394A9000FAA42 /* DaysCell.swift */; };
+		0F191C8E23339543000FAA42 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C8D23339543000FAA42 /* Days.swift */; };
+		0F191C9323339B00000FAA42 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C9223339B00000FAA42 /* ThirdViewController.swift */; };
 		0F3ABE75233254AB00E6BA9C /* ExampleCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3ABE74233254AB00E6BA9C /* ExampleCardCell.swift */; };
 		0FBA592223321F890057A636 /* CustomiseChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA592123321F890057A636 /* CustomiseChallengeViewController.swift */; };
 		A690ED79C828C8EBB9B64BF4 /* Pods_Muve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B671DBE4385F2A049E437 /* Pods_Muve.framework */; };
@@ -25,6 +29,10 @@
 		0F086E89233186EE00E225B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F086E8B233186EE00E225B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F191C85233375C5000FAA42 /* Excersises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excersises.swift; sourceTree = "<group>"; };
+		0F191C8923338CCC000FAA42 /* SecondQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionViewController.swift; sourceTree = "<group>"; };
+		0F191C8B233394A9000FAA42 /* DaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysCell.swift; sourceTree = "<group>"; };
+		0F191C8D23339543000FAA42 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		0F191C9223339B00000FAA42 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		0F3ABE74233254AB00E6BA9C /* ExampleCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCardCell.swift; sourceTree = "<group>"; };
 		0FBA592123321F890057A636 /* CustomiseChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomiseChallengeViewController.swift; sourceTree = "<group>"; };
 		3908F60D18F8CBE12DDE602E /* Pods-Muve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muve.release.xcconfig"; path = "Target Support Files/Pods-Muve/Pods-Muve.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,32 +73,52 @@
 		0F086E7E233186EC00E225B1 /* Muve */ = {
 			isa = PBXGroup;
 			children = (
-				0F191C87233380A4000FAA42 /* Challenge Creation */,
-				0F191C84233375BC000FAA42 /* Model */,
 				0F086E7F233186EC00E225B1 /* AppDelegate.swift */,
 				0F086E81233186EC00E225B1 /* ViewController.swift */,
+				0F191C87233380A4000FAA42 /* Challenge Creation */,
 				0F086E86233186EE00E225B1 /* Assets.xcassets */,
 				0F086E88233186EE00E225B1 /* LaunchScreen.storyboard */,
 				0F086E8B233186EE00E225B1 /* Info.plist */,
-				0F3ABE74233254AB00E6BA9C /* ExampleCardCell.swift */,
 			);
 			path = Muve;
-			sourceTree = "<group>";
-		};
-		0F191C84233375BC000FAA42 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0F191C85233375C5000FAA42 /* Excersises.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0F191C87233380A4000FAA42 /* Challenge Creation */ = {
 			isa = PBXGroup;
 			children = (
-				0FBA592123321F890057A636 /* CustomiseChallengeViewController.swift */,
+				0F191C9123339AD2000FAA42 /* Models */,
+				0F191C9023339AC6000FAA42 /* ViewControllers */,
+				0F191C8F23339AB6000FAA42 /* Cell */,
 			);
 			path = "Challenge Creation";
+			sourceTree = "<group>";
+		};
+		0F191C8F23339AB6000FAA42 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0F191C8B233394A9000FAA42 /* DaysCell.swift */,
+				0F3ABE74233254AB00E6BA9C /* ExampleCardCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0F191C9023339AC6000FAA42 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FBA592123321F890057A636 /* CustomiseChallengeViewController.swift */,
+				0F191C8923338CCC000FAA42 /* SecondQuestionViewController.swift */,
+				0F191C9223339B00000FAA42 /* ThirdViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0F191C9123339AD2000FAA42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F191C8D23339543000FAA42 /* Days.swift */,
+				0F191C85233375C5000FAA42 /* Excersises.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		807D11D70CA4655C2773FB0B /* Pods */ = {
@@ -230,9 +258,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F086E82233186EC00E225B1 /* ViewController.swift in Sources */,
+				0F191C9323339B00000FAA42 /* ThirdViewController.swift in Sources */,
 				0FBA592223321F890057A636 /* CustomiseChallengeViewController.swift in Sources */,
 				0F191C86233375C5000FAA42 /* Excersises.swift in Sources */,
+				0F191C8C233394A9000FAA42 /* DaysCell.swift in Sources */,
 				0F3ABE75233254AB00E6BA9C /* ExampleCardCell.swift in Sources */,
+				0F191C8A23338CCC000FAA42 /* SecondQuestionViewController.swift in Sources */,
+				0F191C8E23339543000FAA42 /* Days.swift in Sources */,
 				0F086E80233186EC00E225B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
