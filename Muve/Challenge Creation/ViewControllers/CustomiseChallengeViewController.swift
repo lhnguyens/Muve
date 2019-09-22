@@ -121,16 +121,19 @@ extension CustomiseChallengeViewController {
     }
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
         excersiseList.remove(at: index)
+        let nextController = SecondQuestionViewController()
+        self.navigationController?.pushViewController(nextController, animated: true)
+        print("Screens Pushed")
 
         
     }
     
-    func didSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
-        
-        let nextController = SecondQuestionViewController()
-        self.navigationController?.pushViewController(nextController, animated: true)
-        print("Screens Pushed")
-    }
+//    func didSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
+//        
+//        let nextController = SecondQuestionViewController()
+//        self.navigationController?.pushViewController(nextController, animated: true)
+//        print("Screens Pushed")
+//    }
     
 }
 

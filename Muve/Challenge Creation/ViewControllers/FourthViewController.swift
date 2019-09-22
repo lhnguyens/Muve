@@ -1,5 +1,5 @@
 //
-//  SecondQuestionViewController.swift
+//  FourthViewController.swift
 //  Muve
 //
 //  Created by Luan Nguyen on 2019-09-19.
@@ -9,48 +9,50 @@
 import UIKit
 import VerticalCardSwiper
 
-class SecondQuestionViewController: UIViewController, VerticalCardSwiperDelegate, VerticalCardSwiperDatasource
+class FourthViewController: UIViewController, VerticalCardSwiperDelegate, VerticalCardSwiperDatasource {
     
-{
-    let cardSwiper: VerticalCardSwiper = {
-        let cS = VerticalCardSwiper()
-        cS.translatesAutoresizingMaskIntoConstraints = false
-        cS.cardSpacing = 15
-        cS.register(DaysCell.self, forCellWithReuseIdentifier: "daysCell")
-        return cS
-    }()
-   
+    
+    
+    
+    var startingPoint: [StartingPoint] = []
+    
     let questionLabel: UILabel = {
         let questionLabel = UILabel()
         questionLabel.translatesAutoresizingMaskIntoConstraints = false
         questionLabel.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
-        questionLabel.text = "How long will you challenge yourself for?"
+        questionLabel.text = "How many will you begin with?"
         questionLabel.numberOfLines = 0
         questionLabel.textAlignment = .center
         return questionLabel
     }()
-
-    var daysLists: [Days] = []
-
+    
+    let cardSwiper: VerticalCardSwiper = {
+        let cs = VerticalCardSwiper()
+        cs.translatesAutoresizingMaskIntoConstraints = false
+        cs.cardSpacing = 15
+        cs.register(StartingPointCell.self, forCellWithReuseIdentifier: "startingPointCell")
+        return cs
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        daysLists = createDays()
-        addToSubView()
-        setLayoutConstraints()
         
-        cardSwiper.datasource = self
+        startingPoint = createData()
+        
+        addViewsToScreen()
+        setLayouts()
+        
         cardSwiper.delegate = self
-
-    
+        cardSwiper.datasource = self
     }
     
-    func addToSubView() {
+    func addViewsToScreen() {
         view.addSubview(questionLabel)
         view.addSubview(cardSwiper)
-
     }
-    func setLayoutConstraints () {
+    
+    func setLayouts() {
         NSLayoutConstraint.activate([
             questionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             questionLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
@@ -64,63 +66,56 @@ class SecondQuestionViewController: UIViewController, VerticalCardSwiperDelegate
             cardSwiper.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             cardSwiper.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             ])
-    }
-    
-    func createDays() -> [Days] {
-        let option1 = Days(days: "100", backgroundColor: .magenta)
-        let option2 = Days(days: "90", backgroundColor: .blue)
-        let option3 = Days(days: "60", backgroundColor: .cyan)
-        let option4 = Days(days: "30", backgroundColor: .lightGray)
-        let option5 = Days(days: "10", backgroundColor: .orange)
-        let option6 = Days(days: "7", backgroundColor: .purple)
-        let option7 = Days(days: "3", backgroundColor: .brown)
-        
-        daysLists.append(option1)
-        daysLists.append(option2)
-        daysLists.append(option3)
-        daysLists.append(option4)
-        daysLists.append(option5)
-        daysLists.append(option6)
-        daysLists.append(option7)
-        
-        return daysLists
         
     }
     
-
+    func createData () -> [StartingPoint] {
+        let option1 = StartingPoint(startingPoint: "1", backgroundColor: .green)
+        let option2 = StartingPoint(startingPoint: "2", backgroundColor: .black)
+        let option3 = StartingPoint(startingPoint: "4", backgroundColor: .cyan)
+        let option4 = StartingPoint(startingPoint: "6", backgroundColor: .blue)
+        let option5 = StartingPoint(startingPoint: "8", backgroundColor: .orange)
+        let option6 = StartingPoint(startingPoint: "10", backgroundColor: .purple)
+        let option7 = StartingPoint(startingPoint: "15", backgroundColor: .brown)
+        
+        startingPoint.append(option1)
+        startingPoint.append(option2)
+        startingPoint.append(option3)
+        startingPoint.append(option4)
+        startingPoint.append(option5)
+        startingPoint.append(option6)
+        startingPoint.append(option7)
+        
+        return startingPoint
+        
+    }
+    
+    
+    
+    
     
 }
 
-//CARD section
-extension SecondQuestionViewController {
-    
+extension FourthViewController {
     
     func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
-        return daysLists.count
+        return startingPoint.count
     }
     
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         
-        if let cell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "daysCell", for: index) as? DaysCell {
-            let item = daysLists[index]
-            cell.getDays(days: item)
+        if let cell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "startingPointCell", for: index) as? StartingPointCell {
+            let item = startingPoint[index]
+            cell.getStartingPoint(amount: item)
             cell.layer.cornerRadius = 10
             cell.layer.masksToBounds = true
             return cell
-            
         }
         return CardCell()
     }
-    
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
-        daysLists.remove(at: index)
-        let nextVC = ThirdViewController()
+        startingPoint.remove(at: index)
+        let nextVC = HomeViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
-//    func didSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
-//        let nextVC = ThirdViewController()
-//        self.navigationController?.pushViewController(nextVC, animated: true)
-//    }
-    
-    
 }

@@ -16,7 +16,15 @@
 		0F191C8C233394A9000FAA42 /* DaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C8B233394A9000FAA42 /* DaysCell.swift */; };
 		0F191C8E23339543000FAA42 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C8D23339543000FAA42 /* Days.swift */; };
 		0F191C9323339B00000FAA42 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C9223339B00000FAA42 /* ThirdViewController.swift */; };
+		0F191C9523339F7E000FAA42 /* AmountIncreaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C9423339F7E000FAA42 /* AmountIncreaseCell.swift */; };
+		0F191C972333A108000FAA42 /* AmountIncreased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C962333A108000FAA42 /* AmountIncreased.swift */; };
+		0F191C992333A7AC000FAA42 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C982333A7AC000FAA42 /* FourthViewController.swift */; };
+		0F191C9B2333A8B9000FAA42 /* StartingPointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C9A2333A8B9000FAA42 /* StartingPointCell.swift */; };
+		0F191C9D2333A8F9000FAA42 /* StartingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F191C9C2333A8F9000FAA42 /* StartingPoint.swift */; };
+		0F1F4C2C2334A75B00180943 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F4C2B2334A75B00180943 /* HomeViewController.swift */; };
+		0F255E5023367518004F48CF /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F255E4F23367518004F48CF /* UIView+Ext.swift */; };
 		0F3ABE75233254AB00E6BA9C /* ExampleCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3ABE74233254AB00E6BA9C /* ExampleCardCell.swift */; };
+		0F50630C2334F5F0002B3AD1 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50630B2334F5F0002B3AD1 /* HomeCell.swift */; };
 		0FBA592223321F890057A636 /* CustomiseChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBA592123321F890057A636 /* CustomiseChallengeViewController.swift */; };
 		A690ED79C828C8EBB9B64BF4 /* Pods_Muve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B671DBE4385F2A049E437 /* Pods_Muve.framework */; };
 /* End PBXBuildFile section */
@@ -33,7 +41,15 @@
 		0F191C8B233394A9000FAA42 /* DaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysCell.swift; sourceTree = "<group>"; };
 		0F191C8D23339543000FAA42 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
 		0F191C9223339B00000FAA42 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		0F191C9423339F7E000FAA42 /* AmountIncreaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountIncreaseCell.swift; sourceTree = "<group>"; };
+		0F191C962333A108000FAA42 /* AmountIncreased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountIncreased.swift; sourceTree = "<group>"; };
+		0F191C982333A7AC000FAA42 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		0F191C9A2333A8B9000FAA42 /* StartingPointCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPointCell.swift; sourceTree = "<group>"; };
+		0F191C9C2333A8F9000FAA42 /* StartingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPoint.swift; sourceTree = "<group>"; };
+		0F1F4C2B2334A75B00180943 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0F255E4F23367518004F48CF /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		0F3ABE74233254AB00E6BA9C /* ExampleCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCardCell.swift; sourceTree = "<group>"; };
+		0F50630B2334F5F0002B3AD1 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0FBA592123321F890057A636 /* CustomiseChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomiseChallengeViewController.swift; sourceTree = "<group>"; };
 		3908F60D18F8CBE12DDE602E /* Pods-Muve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muve.release.xcconfig"; path = "Target Support Files/Pods-Muve/Pods-Muve.release.xcconfig"; sourceTree = "<group>"; };
 		9A3BB8D623FBB2FA224B609B /* Pods-Muve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muve.debug.xcconfig"; path = "Target Support Files/Pods-Muve/Pods-Muve.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +89,8 @@
 		0F086E7E233186EC00E225B1 /* Muve */ = {
 			isa = PBXGroup;
 			children = (
+				0F255E4E233674D9004F48CF /* Extension */,
+				0F1F4C2A2334A73700180943 /* Home Screen */,
 				0F086E7F233186EC00E225B1 /* AppDelegate.swift */,
 				0F086E81233186EC00E225B1 /* ViewController.swift */,
 				0F191C87233380A4000FAA42 /* Challenge Creation */,
@@ -98,6 +116,8 @@
 			children = (
 				0F191C8B233394A9000FAA42 /* DaysCell.swift */,
 				0F3ABE74233254AB00E6BA9C /* ExampleCardCell.swift */,
+				0F191C9423339F7E000FAA42 /* AmountIncreaseCell.swift */,
+				0F191C9A2333A8B9000FAA42 /* StartingPointCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -108,6 +128,7 @@
 				0FBA592123321F890057A636 /* CustomiseChallengeViewController.swift */,
 				0F191C8923338CCC000FAA42 /* SecondQuestionViewController.swift */,
 				0F191C9223339B00000FAA42 /* ThirdViewController.swift */,
+				0F191C982333A7AC000FAA42 /* FourthViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,8 +138,27 @@
 			children = (
 				0F191C8D23339543000FAA42 /* Days.swift */,
 				0F191C85233375C5000FAA42 /* Excersises.swift */,
+				0F191C962333A108000FAA42 /* AmountIncreased.swift */,
+				0F191C9C2333A8F9000FAA42 /* StartingPoint.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0F1F4C2A2334A73700180943 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0F1F4C2B2334A75B00180943 /* HomeViewController.swift */,
+				0F50630B2334F5F0002B3AD1 /* HomeCell.swift */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		0F255E4E233674D9004F48CF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0F255E4F23367518004F48CF /* UIView+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		807D11D70CA4655C2773FB0B /* Pods */ = {
@@ -257,14 +297,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F255E5023367518004F48CF /* UIView+Ext.swift in Sources */,
+				0F191C992333A7AC000FAA42 /* FourthViewController.swift in Sources */,
 				0F086E82233186EC00E225B1 /* ViewController.swift in Sources */,
+				0F50630C2334F5F0002B3AD1 /* HomeCell.swift in Sources */,
+				0F191C9523339F7E000FAA42 /* AmountIncreaseCell.swift in Sources */,
 				0F191C9323339B00000FAA42 /* ThirdViewController.swift in Sources */,
 				0FBA592223321F890057A636 /* CustomiseChallengeViewController.swift in Sources */,
+				0F1F4C2C2334A75B00180943 /* HomeViewController.swift in Sources */,
 				0F191C86233375C5000FAA42 /* Excersises.swift in Sources */,
+				0F191C9B2333A8B9000FAA42 /* StartingPointCell.swift in Sources */,
 				0F191C8C233394A9000FAA42 /* DaysCell.swift in Sources */,
 				0F3ABE75233254AB00E6BA9C /* ExampleCardCell.swift in Sources */,
 				0F191C8A23338CCC000FAA42 /* SecondQuestionViewController.swift in Sources */,
 				0F191C8E23339543000FAA42 /* Days.swift in Sources */,
+				0F191C972333A108000FAA42 /* AmountIncreased.swift in Sources */,
+				0F191C9D2333A8F9000FAA42 /* StartingPoint.swift in Sources */,
 				0F086E80233186EC00E225B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeveloperLuan.Muve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -433,7 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeveloperLuan.Muve;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

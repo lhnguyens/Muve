@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .black
         view.backgroundColor = .white
         setupViews()
         setupConstraints()
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
         challengeAcceptedButton.translatesAutoresizingMaskIntoConstraints = false
         challengeAcceptedButton.setTitleColor(.white, for: .normal)
         challengeAcceptedButton.setTitle("Yes!", for: .normal)
+        challengeAcceptedButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
                 challengeAcceptedButton.backgroundColor = .blue
         challengeAcceptedButton.clipsToBounds = true
         challengeAcceptedButton.layer.cornerRadius = 12

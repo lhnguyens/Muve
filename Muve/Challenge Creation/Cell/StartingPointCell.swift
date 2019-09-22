@@ -1,5 +1,5 @@
 //
-//  DaysCell.swift
+//  StartingPointCell.swift
 //  Muve
 //
 //  Created by Luan Nguyen on 2019-09-19.
@@ -7,9 +7,11 @@
 //
 
 import Foundation
+
+import UIKit
 import VerticalCardSwiper
 
-class DaysCell: CardCell {
+class StartingPointCell: CardCell {
     
     let textLabel: UILabel = {
         let label = UILabel()
@@ -20,20 +22,15 @@ class DaysCell: CardCell {
     }()
     
     private func addLabel() {
+      
         contentView.addSubview(textLabel)
         NSLayoutConstraint.activate([
             
             textLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            
             textLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
             ])
     }
-    
-    func getDays (days: Days) {
-        textLabel.text = days.days
-        contentView.backgroundColor = days.backgroundColor
-        contentView.layer.opacity = 0.85
-    }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,5 +41,10 @@ class DaysCell: CardCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func getStartingPoint (amount: StartingPoint) {
+        textLabel.text = amount.startingPoint
+        contentView.backgroundColor = amount.backgroundColor
+        contentView.layer.opacity = 0.85
+    }
     
 }
